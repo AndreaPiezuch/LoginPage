@@ -1,0 +1,12 @@
+<ion-view view-title="Andrea Piezuch's References">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-thumbnail-left" ng-repeat="reference in references">
+        <img ng-src="{{reference.image}}" />
+        <h2>{{reference.name}}</h2>
+        <p>{{reference.description}}</p>
+        <label class="referenceDates">{{reference.dates}}</label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

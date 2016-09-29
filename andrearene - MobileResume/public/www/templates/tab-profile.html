@@ -1,0 +1,25 @@
+<ion-view view-title="Andrea Piezuch's Profile">
+  <ion-content class="padding" id="welcomeContent">
+    <div id="imageRow" class="row">
+      <div id="profileInformationContainer">
+        <label id="profileName" class="profileRows">{{profileInformation.name}}</label>
+        <label id="profilePhone" class="profileRows">{{profileInformation.phone}}</label>
+      </div>
+      <div id="jokeContainer">
+        <img src="http://cdn8.staztic.com/app/a/5826/5826814/des-blagues-chuck-norris-1-l-124x124.png">
+        <label>{{randomjoke.data.value.joke}}</label>
+      </div>
+    </div>
+    <div id="informationRow" class="row">
+      <ion-list id="contactsList">
+        <ion-item class="contactItem" ng-repeat="item in profileListItems | orderBy: 'name'" href="{{item.url}}" target="_blank">
+          <i class="{{item.icon}}"></i>
+          <h2>{{item.name}}</h2>
+        </ion-item>
+      </ion-list>
+    </div>
+    <div id="descriptionRow" class="row">
+      {{profileInformation.description}}
+    </div>
+  </ion-content>
+</ion-view>
